@@ -1,5 +1,6 @@
 fastapi[standard]
 uvicorn[standard]
+copilotkit
 sqlmodel
 asyncpg
 alembic
