@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = Field("HS256", env="JWT_ALGORITHM")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(30, env="ACCESS_TOKEN_EXPIRE_MINUTES")
     ALEMBIC_LOCAL: str = Field(..., env="ALEMBIC_LOCAL")
+    GEMINI_API_KEY: str = Field(..., env="GEMINI_API_KEY")
+    TRADING_VIEW_USERNAME: str = Field(..., env="TRADING_VIEW_USERNAME")
+    TRADING_VIEW_PASSWORD: str = Field(..., env="TRADING_VIEW_PASSWORD")
 
     model_config = SettingsConfigDict(
         env_file=".env",

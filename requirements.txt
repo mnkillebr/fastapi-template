@@ -1,6 +1,13 @@
 fastapi[standard]
 uvicorn[standard]
+browser-use
+crewai
+groq
+langchain-groq
+langchain-openai
+langchain-google-genai
 copilotkit
+copilotkit[crewai]
 sqlmodel
 asyncpg
 alembic
@@ -12,3 +19,4 @@ pydantic-settings
 pydantic[email]
 greenlet
 psycopg2-binary
+# crewai[tools]
