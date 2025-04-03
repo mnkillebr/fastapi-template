@@ -1,3 +1,4 @@
+from typing import AsyncGenerator
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -12,7 +13,7 @@ reusable_oauth2_scheme = OAuth2PasswordBearer(
 )
 
 # Dependency to get async session.
-async def get_session() -> AsyncSession:
+async def get_session() -> AsyncGenerator[AsyncSession, None]:
     async with async_session() as session:
         yield session
 
